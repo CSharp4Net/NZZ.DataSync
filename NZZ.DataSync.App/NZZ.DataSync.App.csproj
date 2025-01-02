@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8F49DB7-132A-455E-89B4-F859A2AD6173}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NZZ.DataSync.App</RootNamespace>
+    <AssemblyName>NZZ.DataSync.App</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\DialogChooseFromImageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\DialogChooseFromImageList.Designer.cs">
+      <DependentUpon>DialogChooseFromImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetupPaths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetupPaths.Designer.cs">
+      <DependentUpon>FormSetupPaths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetupScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetupScheduler.Designer.cs">
+      <DependentUpon>FormSetupScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSync.Designer.cs">
+      <DependentUpon>FormSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Custom\DialogChooseFromImageList.resx">
+      <DependentUpon>DialogChooseFromImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetupPaths.resx">
+      <DependentUpon>FormSetupPaths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetupScheduler.resx">
+      <DependentUpon>FormSetupScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSync.resx">
+      <DependentUpon>FormSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_small1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NZZ.DataSync.Logic\NZZ.DataSync.Logic.csproj">
+      <Project>{1d0fe692-7dee-4c5d-94ba-748cdad71a8b}</Project>
+      <Name>NZZ.DataSync.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-add_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-add_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-error_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NormalSync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NormalSync_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\calendar-clock.ico" />
+    <Content Include="Images\calendar-clock.png" />
+    <Content Include="Images\CloudSync.ico" />
+    <Content Include="Images\CloudSync.png" />
+    <Content Include="Images\Commands\floppy.ico" />
+    <Content Include="Images\Commands\floppy.png" />
+    <Content Include="Images\Commands\floppy_24.png" />
+    <Content Include="Images\Commands\Warning.ico" />
+    <Content Include="Images\Commands\Warning.png" />
+    <Content Include="Images\exit.ico" />
+    <Content Include="Images\exit.png" />
+    <None Include="Images\exit_64.png" />
+    <None Include="Images\gear_64.png" />
+    <Content Include="Images\Folder\folder-document_ignore.png" />
+    <Content Include="Images\Folder\folder-house_ignore.png" />
+    <Content Include="Images\Folder\folder-music_ignore.png" />
+    <Content Include="Images\Folder\folder-picture_ignore.png" />
+    <Content Include="Images\Folder\folder-video_ignore.png" />
+    <Content Include="Images\Folder\folder.ico" />
+    <Content Include="Images\Folder\folder.png" />
+    <Content Include="Images\Folder\folder_ignore.png" />
+    <Content Include="Images\Folder\shared-folder_network_ignore.png" />
+    <Content Include="Images\gear.ico" />
+    <Content Include="Images\gear.png" />
+    <Content Include="Images\magnifier-data.ico" />
+    <Content Include="Images\magnifier-data.png" />
+    <None Include="Images\Commands\floppy_32.png" />
+    <Content Include="Images\Commands\sign-add.ico" />
+    <Content Include="Images\Commands\sign-add.png" />
+    <Content Include="Images\Commands\sign-add_32.png" />
+    <Content Include="Images\Commands\sign-add_64.png" />
+    <Content Include="Images\Commands\sign-check.ico" />
+    <Content Include="Images\Commands\sign-check.png" />
+    <Content Include="Images\Commands\sign-error.ico" />
+    <Content Include="Images\Commands\sign-error.png" />
+    <Content Include="Images\Commands\sign-error_32.png" />
+    <Content Include="Images\Folder\folder-document.ico" />
+    <Content Include="Images\Folder\folder-document.png" />
+    <Content Include="Images\Folder\folder-house.ico" />
+    <Content Include="Images\Folder\folder-house.png" />
+    <Content Include="Images\Folder\folder-music.ico" />
+    <Content Include="Images\Folder\folder-music.png" />
+    <Content Include="Images\Folder\folder-picture.ico" />
+    <Content Include="Images\Folder\folder-picture.png" />
+    <Content Include="Images\Folder\folder-video.ico" />
+    <Content Include="Images\Folder\folder-video.png" />
+    <Content Include="Images\Folder\shared-folder_network.ico" />
+    <Content Include="Images\Folder\shared-folder_network.png" />
+    <None Include="Images\magnifier-data_64.png" />
+    <Content Include="Images\NormalSync.ico" />
+    <Content Include="Images\NormalSync.png" />
+    <None Include="Images\NormalSync_32.png" />
+    <Content Include="Images\NormalSync_64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
