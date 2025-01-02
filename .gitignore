@@ -1,0 +1,9 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/.vs
+/NZZ.DataSync.App/bin/Debug
+/NZZ.DataSync.App/obj
+/NZZ.DataSync.Logic/bin/Debug
+/NZZ.DataSync.Logic/obj
